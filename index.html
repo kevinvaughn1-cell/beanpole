@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beanpole</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <picture>
+    <!-- Mobile: square image fills portrait viewport -->
+    <source
+      media="(max-width: 768px)"
+      srcset="assets/images/logos/Gemini_Generated_Image_16wipp16wipp16wi.png"
+    >
+    <!-- Desktop: wide landscape image, no black bars -->
+    <img
+      class="bg"
+      src="assets/images/logos/Gemini_Generated_Image_553ygz553ygz553y.png"
+      alt="Beanpole"
+      id="bgImg"
+    >
+  </picture>
+
+  <audio id="audio" preload="auto">
+    <source src="assets/audio/Fall%20Over%20Me.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="toggleBtn" aria-label="Play / Pause">play</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
