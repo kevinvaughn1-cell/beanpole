@@ -18,7 +18,7 @@ html, body {
 .bg {
   position: fixed;
   inset: 0;
-  background-image: url('../assets/images/logos/Gemini_Generated_Image_553ygz553ygz553y.png');
+  background-image: url('/assets/images/logos/Gemini_Generated_Image_553ygz553ygz553y.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -83,7 +83,7 @@ body::after {
 
 @media (max-width: 768px) {
   .bg {
-    background-image: url('../assets/images/logos/mobile.png');
+    background-image: url('/assets/images/logos/mobile.png');
     background-position: 51% 14%;
   }
 }
