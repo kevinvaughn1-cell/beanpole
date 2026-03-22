@@ -103,6 +103,6 @@ body::after {
 @media (max-width: 768px) {
   .bg {
     background-image: url('/assets/images/logos/mobile.png');
-    background-position: center center;
+    background-position: 45% center;
   }
 }
