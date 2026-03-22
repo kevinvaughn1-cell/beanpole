@@ -85,3 +85,10 @@ body::after {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.5; }
 }
+
+@media (max-width: 768px) {
+  .bg {
+    object-fit: contain;
+    object-position: center center;
+  }
+}
