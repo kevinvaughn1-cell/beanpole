@@ -31,6 +31,15 @@ html, body {
   border-bottom: 1px solid rgba(196, 149, 10, 0.2);
 }
 
+#eventBar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#eventBar a:hover {
+  color: rgba(226, 217, 200, 0.85);
+}
+
 /* ── Full-page background ── */
 .bg {
   position: fixed;
