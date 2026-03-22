@@ -14,6 +14,23 @@ html, body {
   background: #080807;
 }
 
+/* ── Event bar ── */
+#eventBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background: #080807;
+  color: rgba(196, 149, 10, 0.85);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding: 0.45rem 1rem;
+  border-bottom: 1px solid rgba(196, 149, 10, 0.2);
+}
+
 /* ── Full-page background ── */
 .bg {
   position: fixed;
