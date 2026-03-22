@@ -88,7 +88,6 @@ body::after {
 
 @media (max-width: 768px) {
   .bg {
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
   }
 }
