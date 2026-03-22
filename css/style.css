@@ -24,7 +24,7 @@ html, body {
   background-image: url('/assets/images/logos/Gemini_Generated_Image_553ygz553ygz553y.png');
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: center center;
+  background-position: 48% center;
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -103,6 +103,6 @@ body::after {
 @media (max-width: 768px) {
   .bg {
     background-image: url('/assets/images/logos/mobile.png');
-    background-position: 45% center;
+    background-position: 43% center;
   }
 }
