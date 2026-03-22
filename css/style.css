@@ -17,8 +17,12 @@ html, body {
 /* ── Full-page background ── */
 .bg {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: url('/assets/images/logos/Gemini_Generated_Image_553ygz553ygz553y.png');
+  -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -29,7 +33,10 @@ html, body {
 body::after {
   content: '';
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: repeating-linear-gradient(
     0deg,
     transparent,
