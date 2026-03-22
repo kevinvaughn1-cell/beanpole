@@ -48,32 +48,44 @@ body::after {
   z-index: 10;
 }
 
-/* ── Play / Pause button ── */
-#toggleBtn {
+/* ── Player controls ── */
+#playerControls {
   position: fixed;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#playerControls button {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-
+  padding: 0.4rem 0.6rem;
   font-family: 'Space Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(226, 217, 200, 0.45);
-
   transition: color 0.3s;
 }
 
-#toggleBtn:hover {
-  color: rgba(226, 217, 200, 0.7);
+#toggleBtn {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
 }
 
-/* When autoplay is blocked, nudge the button to be more visible */
+#prevBtn, #nextBtn {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+#playerControls button:hover {
+  color: rgba(226, 217, 200, 0.8);
+}
+
+/* When autoplay is blocked, nudge play button */
 #toggleBtn.needs-interaction {
   color: rgba(196, 149, 10, 0.55);
   animation: pulse-opacity 2s ease-in-out infinite;

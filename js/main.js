@@ -1,45 +1,95 @@
 /* ============================================================
-   BEANPOLE — autoplay + toggle
+   BEANPOLE — playlist + autoplay + controls
 ============================================================ */
 (function () {
-  const audio     = document.getElementById('audio');
-  const btn       = document.getElementById('toggleBtn');
-  const bgImg     = document.getElementById('bgImg');
+  const tracks = [
+    'assets/audio/Fall%20Over%20Me.mp3',
+    'assets/audio/Changed.mp3',
+    'assets/audio/Rain.mp3',
+    'assets/audio/Lackluster.mp3',
+    'assets/audio/Breakdown.mp3',
+    'assets/audio/Burn%20Out.mp3',
+    'assets/audio/Bruce%20Lee.mp3',
+    'assets/audio/She_s%20Gone%20to%20Dallas.mp3',
+    'assets/audio/Exit%20303.mp3',
+    'assets/audio/Shacked%20Up%20in%20Durango.mp3',
+    'assets/audio/Ask%20Him.mp3',
+    'assets/audio/Kalifornia.mp3',
+    'assets/audio/Shoes.mp3',
+    'assets/audio/Bobby.mp3'
+  ];
 
-  if (!audio || !btn) return;
+  const audio   = document.getElementById('audio');
+  const btnPlay = document.getElementById('toggleBtn');
+  const btnPrev = document.getElementById('prevBtn');
+  const btnNext = document.getElementById('nextBtn');
+  const bgImg   = document.getElementById('bgImg');
 
-  function setLabel(playing) {
-    btn.textContent = playing ? 'pause' : 'play';
+  if (!audio || !btnPlay) return;
+
+  /* Start on a random track */
+  let current = Math.floor(Math.random() * tracks.length);
+
+  function loadTrack(index, andPlay) {
+    audio.src = tracks[index];
+    audio.load();
+    if (andPlay) {
+      audio.play().then(function () {
+        setLabel(true);
+        btnPlay.classList.remove('needs-interaction');
+      }).catch(function () {
+        setLabel(false);
+        btnPlay.classList.add('needs-interaction');
+      });
+    } else {
+      setLabel(false);
+    }
   }
 
-  /* Try autoplay after 2s */
+  function setLabel(playing) {
+    btnPlay.textContent = playing ? 'pause' : 'play';
+  }
+
+  function prev() {
+    current = (current - 1 + tracks.length) % tracks.length;
+    loadTrack(current, true);
+  }
+
+  function next() {
+    current = (current + 1) % tracks.length;
+    loadTrack(current, true);
+  }
+
+  /* Load random track, autoplay after 2s */
+  loadTrack(current, false);
   setTimeout(function () {
     audio.play().then(function () {
       setLabel(true);
-      btn.classList.remove('needs-interaction');
+      btnPlay.classList.remove('needs-interaction');
     }).catch(function () {
-      /* Browser blocked autoplay — prompt user */
       setLabel(false);
-      btn.classList.add('needs-interaction');
+      btnPlay.classList.add('needs-interaction');
     });
   }, 2000);
+
+  /* Auto-advance to next track when one finishes */
+  audio.addEventListener('ended', function () {
+    next();
+  });
 
   function toggle() {
     if (audio.paused) {
       audio.play();
       setLabel(true);
-      btn.classList.remove('needs-interaction');
+      btnPlay.classList.remove('needs-interaction');
     } else {
       audio.pause();
       setLabel(false);
     }
   }
 
-  /* Toggle on button or logo click */
-  btn.addEventListener('click', toggle);
-  if (bgImg) bgImg.addEventListener('click', toggle);
-
-  audio.addEventListener('ended', function () {
-    setLabel(false);
-  });
+  btnPlay.addEventListener('click', toggle);
+  if (btnPrev) btnPrev.addEventListener('click', prev);
+  if (btnNext) btnNext.addEventListener('click', next);
+  if (bgImg)   bgImg.addEventListener('click', toggle);
 })();

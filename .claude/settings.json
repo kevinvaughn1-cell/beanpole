@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/kevin/Downloads/**)",
+      "Bash(unzip -o \"/home/kevin/Downloads/drive-download-20260322T052350Z-1-001.zip\" -d \"/home/kevin/dev/beanpole-site/assets/audio/\")"
+    ]
+  }
+}
