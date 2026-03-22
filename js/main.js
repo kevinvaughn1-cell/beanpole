@@ -27,8 +27,12 @@
 
   if (!audio || !btnPlay) return;
 
-  /* Start on a random track */
-  let current = Math.floor(Math.random() * tracks.length);
+  /* Shuffle playlist */
+  for (let i = tracks.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [tracks[i], tracks[j]] = [tracks[j], tracks[i]];
+  }
+  let current = 0;
 
   function loadTrack(index, andPlay) {
     audio.src = tracks[index];
