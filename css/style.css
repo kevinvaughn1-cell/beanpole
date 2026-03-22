@@ -84,6 +84,6 @@ body::after {
 @media (max-width: 768px) {
   .bg {
     background-image: url('/assets/images/logos/mobile.png');
-    background-position: 51% 14%;
+    background-position: 47% 8%;
   }
 }
