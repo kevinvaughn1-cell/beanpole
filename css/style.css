@@ -89,6 +89,6 @@ body::after {
 @media (max-width: 768px) {
   .bg {
     object-fit: cover;
-    object-position: 54% 18%;
+    object-position: 51% 14%;
   }
 }
