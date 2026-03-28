@@ -50,7 +50,7 @@ html, body {
   background-image: url('/assets/images/logos/Gemini_Generated_Image_553ygz553ygz553y.png');
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: 44% calc(50% - 15px);
+  background-position: 52% calc(50% - 15px);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -126,9 +126,3 @@ body::after {
   50%       { opacity: 0.5; }
 }
 
-@media (max-width: 768px) {
-  .bg {
-    background-image: url('/assets/images/logos/mobile.png');
-    background-position: 40% calc(50% - 25px);
-  }
-}
