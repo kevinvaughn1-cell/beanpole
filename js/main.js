@@ -50,8 +50,12 @@
     }
   }
 
+  const iconPlay  = document.getElementById('iconPlay');
+  const iconPause = document.getElementById('iconPause');
+
   function setLabel(playing) {
-    btnPlay.textContent = playing ? 'pause' : 'play';
+    iconPlay.style.display  = playing ? 'none'  : '';
+    iconPause.style.display = playing ? ''      : 'none';
   }
 
   function prev() {

@@ -14,31 +14,6 @@ html, body {
   background: #080807;
 }
 
-/* ── Event bar ── */
-#eventBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 30;
-  background: #080807;
-  color: rgba(196, 149, 10, 0.85);
-  font-family: 'Space Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.15em;
-  text-align: center;
-  padding: 0.45rem 1rem;
-  border-bottom: 1px solid rgba(196, 149, 10, 0.2);
-}
-
-#eventBar a {
-  color: inherit;
-  text-decoration: none;
-}
-
-#eventBar a:hover {
-  color: rgba(226, 217, 200, 0.85);
-}
 
 /* ── Full-page background ── */
 .bg {
@@ -47,10 +22,10 @@ html, body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('/assets/images/logos/Gemini_Generated_Image_553ygz553ygz553y.png');
+  background-image: url('/assets/images/logos/Beanpole-home-page.png');
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: 52% calc(50% - 15px);
+  background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -93,36 +68,31 @@ body::after {
   padding: 0.4rem 0.6rem;
   font-family: 'Space Mono', monospace;
   text-transform: uppercase;
-  color: rgba(226, 217, 200, 0.45);
+  color: rgba(196, 149, 10, 0.5);
   transition: color 0.3s;
 }
 
 #toggleBtn {
-  font-size: 0.6rem;
-  letter-spacing: 0.3em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
 #prevBtn, #nextBtn {
-  font-size: 1.4rem;
-  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
 #playerControls button:hover {
-  color: rgba(226, 217, 200, 0.8);
+  color: rgba(196, 149, 10, 0.9);
 }
 
 /* When autoplay is blocked, nudge play button */
 #toggleBtn.needs-interaction {
-  color: rgba(196, 149, 10, 0.55);
-  animation: pulse-opacity 2s ease-in-out infinite;
+  color: rgba(196, 149, 10, 0.75);
 }
 
 #toggleBtn.needs-interaction:hover {
-  color: rgba(196, 149, 10, 0.9);
-}
-
-@keyframes pulse-opacity {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.5; }
+  color: rgba(196, 149, 10, 1);
 }
 

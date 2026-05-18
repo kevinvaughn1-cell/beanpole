@@ -11,20 +11,25 @@
 </head>
 <body>
 
-  <div id="eventBar"><a href="assets/images/press/648101341_1538823474914953_5941065248046419991_n.jpg" target="_blank">MILES FOR MADDIE &amp; GRACIE &middot; CYSTIC FIBROSIS BENEFIT &middot; APR 4 &middot; 1–5PM &middot; FLYING SAUCER CORDOVA</a></div>
-
-  <div class="bg" id="bgImg" aria-label="Beanpole"></div>
+<div class="bg" id="bgImg" aria-label="Beanpole"></div>
 
   <audio id="audio" preload="auto">
     <source src="assets/audio/Fall%20Over%20Me.mp3" type="audio/mpeg">
   </audio>
 
   <div id="playerControls">
-    <button id="prevBtn" aria-label="Previous">&lsaquo;</button>
-    <button id="toggleBtn" aria-label="Play / Pause">play</button>
-    <button id="nextBtn" aria-label="Next">&rsaquo;</button>
+    <button id="prevBtn" aria-label="Previous">
+      <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><rect x="4" y="3" width="3" height="18"/><polygon points="19,3 8,12 19,21"/></svg>
+    </button>
+    <button id="toggleBtn" aria-label="Play / Pause">
+      <svg id="iconPlay" viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+      <svg id="iconPause" viewBox="0 0 24 24" width="36" height="36" fill="currentColor" style="display:none"><rect x="5" y="3" width="5" height="18"/><rect x="14" y="3" width="5" height="18"/></svg>
+    </button>
+    <button id="nextBtn" aria-label="Next">
+      <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><polygon points="5,3 16,12 5,21"/><rect x="17" y="3" width="3" height="18"/></svg>
+    </button>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>
