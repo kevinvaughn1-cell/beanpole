@@ -49,6 +49,29 @@ body::after {
   z-index: 10;
 }
 
+/* ── Social links ── */
+#socialLinks {
+  position: fixed;
+  bottom: 5.5rem;
+  left: 50%;
+  transform: translateX(calc(-50% - 8px));
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+#socialLinks a {
+  color: rgba(196, 149, 10, 0.45);
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+#socialLinks a:hover {
+  color: rgba(196, 149, 10, 0.9);
+}
+
 /* ── Player controls ── */
 #playerControls {
   position: fixed;
