@@ -161,7 +161,8 @@ body::after {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%) translateY(100%);
-  width: min(92vw, 540px);
+  width: 92vw;
+  max-width: 540px;
   height: auto;
   max-height: 72vh;
   transition: transform 0.35s ease;
