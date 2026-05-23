@@ -24,6 +24,11 @@
   const btnPrev = document.getElementById('prevBtn');
   const btnNext = document.getElementById('nextBtn');
   const bgImg   = document.getElementById('bgImg');
+  const drawer       = document.getElementById('infoDrawer');
+  const drawerHandle = document.getElementById('drawerHandle');
+  const drawerClose  = document.getElementById('drawerClose');
+  const drawerX      = document.getElementById('drawerX');
+  const handleLabel  = document.getElementById('drawerHandleLabel');
 
   if (!audio || !btnPlay) return;
 
@@ -85,6 +90,20 @@
     next();
   });
 
+  function openDrawer() {
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
+    drawerHandle.setAttribute('aria-expanded', 'true');
+    handleLabel.textContent = '▼ BEANPOLE';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+    drawerHandle.setAttribute('aria-expanded', 'false');
+    handleLabel.textContent = '▲ BEANPOLE';
+  }
+
   function toggle() {
     if (audio.paused) {
       audio.play();
@@ -99,5 +118,21 @@
   btnPlay.addEventListener('click', toggle);
   if (btnPrev) btnPrev.addEventListener('click', prev);
   if (btnNext) btnNext.addEventListener('click', next);
-  if (bgImg)   bgImg.addEventListener('click', toggle);
+
+  if (drawerHandle) drawerHandle.addEventListener('click', openDrawer);
+  if (drawerClose)  drawerClose.addEventListener('click', closeDrawer);
+  if (drawerX)      drawerX.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeDrawer();
+    }
+  });
+  if (bgImg) bgImg.addEventListener('click', function () {
+    if (drawer.classList.contains('open')) {
+      closeDrawer();
+    } else {
+      toggle();
+    }
+  });
 })();
