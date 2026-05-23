@@ -32,42 +32,118 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "@id": "https://beanpolemusic.com/#beanpole",
-    "name": "Beanpole",
-    "alternateName": "Beanpole Memphis",
-    "description": "Beanpole is a Memphis rock band. Big hooks, alternative edge, Americana grit, swamp in the blood. Active since 1992 and streaming everywhere.",
-    "disambiguatingDescription": "This site represents Beanpole, the Memphis rock band at beanpolemusic.com, and is separate from other artists and music projects using the name Beanpole.",
-    "foundingDate": "1992",
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Memphis, Tennessee"
-    },
-    "genre": ["Rock", "Alternative Rock", "Americana"],
-    "url": "https://beanpolemusic.com/",
-    "image": "https://beanpolemusic.com/assets/images/logos/og-preview.jpg",
-    "sameAs": [
-      "https://www.facebook.com/beanpolememphis",
-      "https://www.instagram.com/beanpolemopo/",
-      "https://open.spotify.com/artist/4FVH4LNDXH0OlN2KeBn3Eo",
-      "https://music.apple.com/us/artist/beanpole/1896580611",
-      "https://www.youtube.com/@beanpole520"
-    ],
-    "track": [
-      {"@type": "MusicRecording", "name": "Fall Over Me"},
-      {"@type": "MusicRecording", "name": "Changed"},
-      {"@type": "MusicRecording", "name": "Rain"},
-      {"@type": "MusicRecording", "name": "Lackluster"},
-      {"@type": "MusicRecording", "name": "Breakdown"},
-      {"@type": "MusicRecording", "name": "Burn Out"},
-      {"@type": "MusicRecording", "name": "Bruce Lee"},
-      {"@type": "MusicRecording", "name": "She's Gone to Dallas"},
-      {"@type": "MusicRecording", "name": "Exit 303"},
-      {"@type": "MusicRecording", "name": "Shacked Up in Durango"},
-      {"@type": "MusicRecording", "name": "Ask Him"},
-      {"@type": "MusicRecording", "name": "Kalifornia"},
-      {"@type": "MusicRecording", "name": "Shoes"},
-      {"@type": "MusicRecording", "name": "Bobby"}
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://beanpolemusic.com/#website",
+        "name": "Beanpole",
+        "url": "https://beanpolemusic.com/",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://beanpolemusic.com/#beanpole"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://beanpolemusic.com/#webpage",
+        "url": "https://beanpolemusic.com/",
+        "name": "Beanpole | Memphis Rock Band | Official Site",
+        "description": "Official site for Beanpole, the Memphis rock band: big hooks, alternative edge, Americana grit, swamp in the blood. Active since 1992 and streaming everywhere.",
+        "isPartOf": {
+          "@id": "https://beanpolemusic.com/#website"
+        },
+        "about": {
+          "@id": "https://beanpolemusic.com/#beanpole"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://beanpolemusic.com/#primaryimage"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://beanpolemusic.com/#primaryimage",
+        "url": "https://beanpolemusic.com/assets/images/logos/og-preview.jpg",
+        "width": 1200,
+        "height": 630,
+        "caption": "Beanpole Memphis rock band official artwork"
+      },
+      {
+        "@type": "MusicGroup",
+        "@id": "https://beanpolemusic.com/#beanpole",
+        "name": "Beanpole",
+        "alternateName": "Beanpole Memphis",
+        "description": "Beanpole is a Memphis rock band. Big hooks, alternative edge, Americana grit, swamp in the blood. Active since 1992 and streaming everywhere.",
+        "disambiguatingDescription": "This site represents Beanpole, the Memphis rock band at beanpolemusic.com, and is separate from other artists and music projects using the name Beanpole.",
+        "foundingDate": "1992",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Memphis, Tennessee"
+        },
+        "genre": ["Rock", "Alternative Rock", "Americana"],
+        "url": "https://beanpolemusic.com/",
+        "image": {
+          "@id": "https://beanpolemusic.com/#primaryimage"
+        },
+        "sameAs": [
+          "https://www.facebook.com/beanpolememphis",
+          "https://www.instagram.com/beanpolemopo/",
+          "https://open.spotify.com/artist/4FVH4LNDXH0OlN2KeBn3Eo",
+          "https://music.apple.com/us/artist/beanpole/1896580611",
+          "https://www.youtube.com/@beanpole520"
+        ],
+        "track": [
+          {"@id": "https://beanpolemusic.com/#recording-fall-over-me"},
+          {"@id": "https://beanpolemusic.com/#recording-changed"},
+          {"@id": "https://beanpolemusic.com/#recording-rain"},
+          {"@id": "https://beanpolemusic.com/#recording-lackluster"},
+          {"@id": "https://beanpolemusic.com/#recording-breakdown"},
+          {"@id": "https://beanpolemusic.com/#recording-burn-out"},
+          {"@id": "https://beanpolemusic.com/#recording-bruce-lee"},
+          {"@id": "https://beanpolemusic.com/#recording-shes-gone-to-dallas"},
+          {"@id": "https://beanpolemusic.com/#recording-exit-303"},
+          {"@id": "https://beanpolemusic.com/#recording-shacked-up-in-durango"},
+          {"@id": "https://beanpolemusic.com/#recording-ask-him"},
+          {"@id": "https://beanpolemusic.com/#recording-kalifornia"},
+          {"@id": "https://beanpolemusic.com/#recording-shoes"},
+          {"@id": "https://beanpolemusic.com/#recording-bobby"}
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://beanpolemusic.com/#recordings",
+        "name": "Beanpole recordings",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "item": {"@id": "https://beanpolemusic.com/#recording-fall-over-me"}},
+          {"@type": "ListItem", "position": 2, "item": {"@id": "https://beanpolemusic.com/#recording-changed"}},
+          {"@type": "ListItem", "position": 3, "item": {"@id": "https://beanpolemusic.com/#recording-rain"}},
+          {"@type": "ListItem", "position": 4, "item": {"@id": "https://beanpolemusic.com/#recording-lackluster"}},
+          {"@type": "ListItem", "position": 5, "item": {"@id": "https://beanpolemusic.com/#recording-breakdown"}},
+          {"@type": "ListItem", "position": 6, "item": {"@id": "https://beanpolemusic.com/#recording-burn-out"}},
+          {"@type": "ListItem", "position": 7, "item": {"@id": "https://beanpolemusic.com/#recording-bruce-lee"}},
+          {"@type": "ListItem", "position": 8, "item": {"@id": "https://beanpolemusic.com/#recording-shes-gone-to-dallas"}},
+          {"@type": "ListItem", "position": 9, "item": {"@id": "https://beanpolemusic.com/#recording-exit-303"}},
+          {"@type": "ListItem", "position": 10, "item": {"@id": "https://beanpolemusic.com/#recording-shacked-up-in-durango"}},
+          {"@type": "ListItem", "position": 11, "item": {"@id": "https://beanpolemusic.com/#recording-ask-him"}},
+          {"@type": "ListItem", "position": 12, "item": {"@id": "https://beanpolemusic.com/#recording-kalifornia"}},
+          {"@type": "ListItem", "position": 13, "item": {"@id": "https://beanpolemusic.com/#recording-shoes"}},
+          {"@type": "ListItem", "position": 14, "item": {"@id": "https://beanpolemusic.com/#recording-bobby"}}
+        ]
+      },
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-fall-over-me", "name": "Fall Over Me", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-changed", "name": "Changed", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-rain", "name": "Rain", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-lackluster", "name": "Lackluster", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-breakdown", "name": "Breakdown", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-burn-out", "name": "Burn Out", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-bruce-lee", "name": "Bruce Lee", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-shes-gone-to-dallas", "name": "She's Gone to Dallas", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-exit-303", "name": "Exit 303", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-shacked-up-in-durango", "name": "Shacked Up in Durango", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-ask-him", "name": "Ask Him", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-kalifornia", "name": "Kalifornia", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-shoes", "name": "Shoes", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}},
+      {"@type": "MusicRecording", "@id": "https://beanpolemusic.com/#recording-bobby", "name": "Bobby", "byArtist": {"@id": "https://beanpolemusic.com/#beanpole"}}
     ]
   }
   </script>
