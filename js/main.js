@@ -120,6 +120,14 @@
   if (btnNext) btnNext.addEventListener('click', next);
 
   if (drawerHandle) drawerHandle.addEventListener('click', openDrawer);
+  if (drawerHandle) {
+    drawerHandle.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openDrawer();
+      }
+    });
+  }
   if (drawerClose)  drawerClose.addEventListener('click', closeDrawer);
   if (drawerX)      drawerX.addEventListener('click', closeDrawer);
 
