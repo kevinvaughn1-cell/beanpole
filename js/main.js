@@ -131,8 +131,6 @@
   if (bgImg) bgImg.addEventListener('click', function () {
     if (drawer.classList.contains('open')) {
       closeDrawer();
-    } else {
-      toggle();
     }
   });
 })();
